@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="53M-Z6-UEd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="h9l-ia-OGi">
+            <objects>
+                <tableViewController id="53M-Z6-UEd" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="22" sectionFooterHeight="22" id="9PL-Ki-tx3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Flame" rowHeight="106" id="C7q-Rf-IZm" customClass="FlameCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C7q-Rf-IZm" id="cZc-RG-IrP">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Heading" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWI-Ji-RdM">
+                                            <rect key="frame" x="23" y="23" width="554" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Flame description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHX-2M-cqf">
+                                            <rect key="frame" x="23" y="59" width="554" height="23"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bHX-2M-cqf" firstAttribute="leading" secondItem="cZc-RG-IrP" secondAttribute="leadingMargin" constant="15" id="ALH-me-nfO"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="bHX-2M-cqf" secondAttribute="trailing" constant="15" id="MhJ-hG-uzu"/>
+                                        <constraint firstItem="bHX-2M-cqf" firstAttribute="top" secondItem="qWI-Ji-RdM" secondAttribute="bottom" constant="15" id="Ohk-s6-LAI"/>
+                                        <constraint firstItem="bHX-2M-cqf" firstAttribute="top" secondItem="qWI-Ji-RdM" secondAttribute="bottom" constant="15" id="YYB-Ld-thX"/>
+                                        <constraint firstItem="qWI-Ji-RdM" firstAttribute="top" secondItem="cZc-RG-IrP" secondAttribute="topMargin" constant="15" id="djq-ch-KwM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="qWI-Ji-RdM" secondAttribute="trailing" constant="15" id="dp9-X9-s9A"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="bHX-2M-cqf" secondAttribute="bottom" constant="15" id="hjv-UT-FwU"/>
+                                        <constraint firstItem="qWI-Ji-RdM" firstAttribute="leading" secondItem="cZc-RG-IrP" secondAttribute="leadingMargin" constant="15" id="z61-uq-9kn"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="Ohk-s6-LAI"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="flameLabel" destination="bHX-2M-cqf" id="4Ng-GA-SvX"/>
+                                    <outlet property="titleLabel" destination="qWI-Ji-RdM" id="avA-gE-LzD"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="53M-Z6-UEd" id="anA-an-29j"/>
+                            <outlet property="delegate" destination="53M-Z6-UEd" id="t4t-mX-5PR"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cem-2B-fYB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-79"/>
+        </scene>
+    </scenes>
+</document>
